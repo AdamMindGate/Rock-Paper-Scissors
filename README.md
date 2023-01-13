@@ -1,3 +1,3 @@
 # Rock-Paper-Scissors
  
-![image](https://user-images.githubusercontent.com/78859273/212436278-46bd03da-3aa6-4933-a7ac-d5bb32883496.png)
+![image](https://user-images.githubusercontent.com/78859273/212436751-d32c1abb-b256-4496-814b-aea5cacf787d.png)
