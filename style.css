@@ -68,3 +68,18 @@ body {
     bottom: 0;
     color: #F3EFE0;
 }
+
+/* socre */
+
+#score {
+    width: fit-content;
+    margin: auto;
+}
+
+#result {
+    width: 200px;
+    font-size: 30px;
+    position: relative;
+    bottom: 80px;
+    text-align: center;
+}

@@ -1,6 +1,10 @@
+let comp_points = 0;
+let p_points = 0;
 let btn = document.getElementsByClassName("btn");
 let computer = document.getElementById("computer");
 let player = document.getElementById("player");
+let score = document.getElementById("score");
+let result = document.getElementById("result");
 /*----------------------------------------------------------------*/
 let comp_move;
 function computer_play() {
@@ -24,22 +28,56 @@ btn[0].onclick = function () {
   player.setAttribute("src", "Media/Rock.png");
   // runs the computer move after each click
   computer_play();
+  // determine the winner
   if (comp_move === 2) {
-    console.log("you lost");
+    result.innerHTML = "Computer Won";
+    // console.log("you lost");
+    comp_points += 1;
+  } else if (comp_move !== 1) {
+    console.log("you won");
+    result.innerHTML = "Player Won";
+    p_points += 1;
+  } else {
+    console.log("draw");
   }
+  // update the score
+  score.innerHTML = `${p_points} - ${comp_points}`;
 };
+
 btn[1].onclick = function () {
   player.setAttribute("src", "Media/Paper.png");
   computer_play();
+  // determine the winner
   if (comp_move === 3) {
-    console.log("you lost");
+    result.innerHTML = "Computer Won";
+    // console.log("you lost");
+    comp_points += 1;
+  } else if (comp_move !== 2) {
+    result.innerHTML = "Player Won";
+    // console.log("you won");
+    p_points += 1;
+  } else {
+    result.innerHTML = "Draw";
   }
+  // update the score
+  score.innerHTML = `${p_points} - ${comp_points}`;
 };
 
 btn[2].onclick = function () {
   player.setAttribute("src", "Media/Scissors.png");
   computer_play();
+  // determine the winner
   if (comp_move === 1) {
-    console.log("you lost");
+    result.innerHTML = "Computer Won";
+    // console.log("you lost");
+    comp_points += 1;
+  } else if (comp_move !== 3) {
+    console.log("you won");
+    result.innerHTML = "Player Won";
+    p_points += 1;
+  } else {
+    result.innerHTML = "Draw";
   }
+  // update the score
+  score.innerHTML = `${p_points} - ${comp_points}`;
 };
