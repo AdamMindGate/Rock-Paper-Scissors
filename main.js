@@ -38,6 +38,7 @@ btn[0].onclick = function () {
     result.innerHTML = "Player Won";
     p_points += 1;
   } else {
+    result.innerHTML = "Draw";
     console.log("draw");
   }
   // update the score
